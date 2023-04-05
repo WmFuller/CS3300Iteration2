@@ -1,6 +1,11 @@
-<h1>Editing Project</h1>
+<!DOCTYPE html>
+    <html lang="en"> 
 
-<%= render 'form', project: @project %>
+    <h1>Editing Project</h1>
 
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+    <%= render 'form', project: @project %>
+
+    <td><%= button_to 'Show', @project, method: :get, class: "btn btn-outline-success", form_class: "d-inline" %></td>
+    <td><%= button_to 'Back', project_path, method: :get, class: "btn btn-outline-success", form_class: "d-inline" %></td>
+
+</html>

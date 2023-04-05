@@ -1,14 +1,19 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en"> 
 
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
+  <p>
+    <strong>Title:</strong>
+    <%= @project.title %>
+  </p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+  <p>
+    <strong>Description:</strong>
+    <%= @project.description %>
+  </p>
+
+  <td><%= button_to 'Edit', edit_project_path(@project), method: :get, class: "btn btn-outline-success", form_class: "d-inline" %></td>
+  <td><%= button_to 'Back', projects_path, method: :get, class: "btn btn-outline-success", form_class: "d-inline" %></td>
+
+</html>

@@ -1,29 +1,46 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <!-- Add Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
 
-<h1>Projects</h1>
+  <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <h1>Projects</h1>
 
-  <tbody>
-    <% @projects.each do |project| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= project.title %></td>
-        <td><%= project.description %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Title</th>
+        <th>Description</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @projects.each do |project| %>
+        <tr>
+          <td><%= project.title %></td>
+          <td><%= project.description %></td>
+          
+          <td><%= button_to 'Show', project, method: :get, class: "btn btn-outline-success", form_class: "d-inline" %></td>
 
-<%= link_to 'New Project', new_project_path %>
+          <td><%= button_to 'Edit', edit_project_path(project), method: :get, class: "btn btn-outline-success", form_class: "d-inline" %></td>
+
+          <td><%= button_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+  
+  <td><%= button_to 'New Project', new_project_path, method: :get, class: "btn btn-outline-success", form_class: "d-inline" %></td>
+
+</body>
+</html>
