@@ -20,18 +20,21 @@
 
   <p id="notice"><%= notice %></p>
 
-  <p>
-    <strong>Title:</strong>
-    <%= @project.title %>
-  </p>
+  <div class="rounded-box">
+    <p>
+      <strong>Title:</strong>
+      <%= @project.title %>
+    </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @project.description %>
-  </p>
+    <p>
+      <strong>Description:</strong>
+      <%= @project.description %>
+    </p>
 
   <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-outline-success" %>
   <%= link_to 'Back', projects_path, class: "btn btn-outline-success" %>
+
+  </div>
 
 </body>
 </html>
