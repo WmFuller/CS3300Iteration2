@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-    <html lang="en"> 
-
-    <h1>Editing Project</h1>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Editing Event</h1>
 
     <%= render 'form', project: @project %>
 
     <td><%= button_to 'Show', @project, method: :get, class: "btn btn-outline-success", form_class: "d-inline" %></td>
     <td><%= button_to 'Back', project_path, method: :get, class: "btn btn-outline-success", form_class: "d-inline" %></td>
 
+</body>
 </html>

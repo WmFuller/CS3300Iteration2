@@ -1,5 +1,13 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
 
   <p id="notice"><%= notice %></p>
 
@@ -13,7 +21,8 @@
     <%= @project.description %>
   </p>
 
-  <td><%= button_to 'Edit', edit_project_path(@project), method: :get, class: "btn btn-outline-success", form_class: "d-inline" %></td>
-  <td><%= button_to 'Back', projects_path, method: :get, class: "btn btn-outline-success", form_class: "d-inline" %></td>
+  <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-outline-success" %>
+  <%= link_to 'Back', projects_path, class: "btn btn-outline-success" %>
 
+</body>
 </html>

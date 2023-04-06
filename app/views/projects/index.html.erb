@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects</title>
   <!-- Add Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
   <p id="notice"><%= notice %></p>
 
-  <h1>Projects</h1>
+  <h1>Calendar</h1>
 
   <table>
     <thead>
@@ -28,11 +28,11 @@
           <td><%= project.title %></td>
           <td><%= project.description %></td>
           
-          <td><%= button_to 'Show', project, method: :get, class: "btn btn-outline-success", form_class: "d-inline" %></td>
+          <td><%= link_to 'Show', project, class: "btn btn-outline-success" %></td>
 
-          <td><%= button_to 'Edit', edit_project_path(project), method: :get, class: "btn btn-outline-success", form_class: "d-inline" %></td>
+          <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-outline-success" %></td>
 
-          <td><%= button_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %></td>
         </tr>
       <% end %>
     </tbody>
@@ -40,7 +40,7 @@
 
   <br>
   
-  <td><%= button_to 'New Project', new_project_path, method: :get, class: "btn btn-outline-success", form_class: "d-inline" %></td>
+  <%= link_to 'New Project', new_project_path, class: "btn btn-outline-success" %>
 
 </body>
 </html>
