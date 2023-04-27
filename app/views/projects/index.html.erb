@@ -21,21 +21,54 @@
   <p id="notice"><%= notice %></p>
 
   <h1>Calendar</h1>
-  <% @projects.each do |project| %>
-    <%= link_to project do %>
-      <div class="rounded-box my-3" style="text-decoration: none; color: inherit;">
-        <h3><%= project.title %></h3>
-        <p><%= project.description %></p>
-        
-        <p>Start: <%= project.start_date.strftime('%Y-%m-%d %H:%M') if project.start_date %></p>
-        <p>End: <%= project.end_date.strftime('%Y-%m-%d %H:%M') if project.end_date %></p>
-      </div>
-    <% end %>
-  <% end %>
   
-  <br>
-  
-  <%= link_to 'New event', new_project_path, class: "btn btn-outline-success" %>
+  <% date = Date.today.beginning_of_month %>
+<% last_day = date.end_of_month %>
+<% prev_month = date.prev_month %>
+<% next_month = date.next_month %>
 
+<h1><%= date.strftime("%B %Y") %></h1>
+</table>  
+  <br>
+  <%= link_to 'New event', new_project_path, class: "btn btn-outline-success" %>
+</body>
+<table>
+  <thead>
+    <tr>
+      <% Date::ABBR_DAYNAMES.each do |day| %>
+        <th><%= day %></th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% while date <= last_day %>
+      <tr>
+        <% 7.times do %>
+          <td>
+            <% if date.month == prev_month.month || date.month == next_month.month %>
+              <%= "" %>
+            <% else %>
+              <%= date.day %>
+              <br>
+              <% @projects.each do |project| %>
+                <% if project.start_date.to_date == date %>
+                  <%= link_to project do %>
+                    <div class="rounded-box my-3" style="text-decoration: none; color: inherit;">
+                      <h3><%= project.title %></h3>
+                      <p><%= project.description %></p>
+                      
+                      <p>Start: <%= project.start_date.strftime('%Y-%m-%d %H:%M') if project.start_date %></p>
+                      <p>End: <%= project.end_date.strftime('%Y-%m-%d %H:%M') if project.end_date %></p>
+                    </div>
+                  <% end %>
+                <% end %>
+              <% end %>
+            <% end %>
+          </td>
+          <% date = date.next_day %>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
 </body>
 </html>
