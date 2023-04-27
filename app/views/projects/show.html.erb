@@ -31,8 +31,9 @@
       <%= @project.description %>
     </p>
 
-  <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-outline-success" %>
-  <%= link_to 'Back', projects_path, class: "btn btn-outline-success" %>
+    <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-outline-success" %>
+    <%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %>
+    <%= link_to 'Back', projects_path, class: "btn btn-outline-success" %>
 
   </div>
 

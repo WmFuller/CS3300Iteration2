@@ -17,6 +17,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
+    @project = Project.find(params[:id])
   end
 
   # POST /projects or /projects.json
@@ -46,6 +47,7 @@ class ProjectsController < ApplicationController
       end
     end
   end
+  
 
   # DELETE /projects/1 or /projects/1.json
   def destroy
@@ -65,6 +67,6 @@ class ProjectsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def project_params
-      params.require(:project).permit(:title, :description)
-    end
+      params.require(:project).permit(:title, :description, :start_date, :end_date)
+    end    
 end

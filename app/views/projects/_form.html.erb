@@ -12,6 +12,16 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :start_date %>
+    <%= form.datetime_select :start_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date %>
+    <%= form.datetime_select :end_date %>
+  </div>
+
+  <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
@@ -25,3 +35,4 @@
     <%= form.submit class: "btn btn-outline-success" %>
   </div>
 <% end %>
+
