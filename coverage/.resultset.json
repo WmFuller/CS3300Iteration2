@@ -9,6 +9,14 @@
           null
         ]
       },
+      "/root/CS3300Iteration2/app/models/project.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/root/CS3300Iteration2/app/channels/application_cable/channel.rb": {
         "lines": [
           0,
@@ -164,16 +172,6 @@
         "branches": {
         }
       },
-      "/root/CS3300Iteration2/app/models/project.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
       "/root/CS3300Iteration2/app/models/user.rb": {
         "lines": [
           0,
@@ -187,6 +185,6 @@
         }
       }
     },
-    "timestamp": 1682620267
+    "timestamp": 1682622582
   }
 }
