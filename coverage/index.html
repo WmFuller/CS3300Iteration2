@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-04-27T19:09:42+00:00">2023-04-27T19:09:42+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-04-27T23:06:11+00:00">2023-04-27T23:06:11+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,7 +23,7 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="red">
-  5.95%
+  5.56%
 </span>
 
      </span>
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>84</b> relevant lines,
+    <b>90</b> relevant lines,
     <span class="green"><b>5</b> lines covered</span> and
-    <span class="red"><b>79</b> lines missed. </span>
+    <span class="red"><b>85</b> lines missed. </span>
     (<span class="red">
-  5.95%
+  5.56%
 </span>
 )
   </div>
@@ -73,10 +73,10 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#343ad5deefd94974b1128e226c7c6e0b09764669" class="src_link" title="app/channels/application_cable/channel.rb">app/channels/application_cable/channel.rb</a></td>
             <td class="red strong cell--number t-file__coverage">0.00 %</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">4</td>
+            <td class="cell--number">15</td>
+            <td class="cell--number">10</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">4</td>
+            <td class="cell--number">10</td>
             <td class="cell--number">0.00</td>
             
           </tr>
@@ -314,9 +314,9 @@
   </div>
 
   <div class="t-line-summary">
-    <b>8</b> relevant lines,
+    <b>14</b> relevant lines,
     <span class="green"><b>0</b> lines covered</span> and
-    <span class="red"><b>8</b> lines missed. </span>
+    <span class="red"><b>14</b> lines missed. </span>
     (<span class="red">
   0.0%
 </span>
@@ -344,10 +344,10 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#343ad5deefd94974b1128e226c7c6e0b09764669" class="src_link" title="app/channels/application_cable/channel.rb">app/channels/application_cable/channel.rb</a></td>
             <td class="red strong cell--number t-file__coverage">0.00 %</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">4</td>
+            <td class="cell--number">15</td>
+            <td class="cell--number">10</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">4</td>
+            <td class="cell--number">10</td>
             <td class="cell--number">0.00</td>
             
           </tr>
@@ -771,9 +771,9 @@
     
 
     <div class="t-line-summary">
-      <b>4</b> relevant lines.
+      <b>10</b> relevant lines.
       <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <span class="red"><b>10</b> lines missed.</span>
     </div>
 
     
@@ -801,7 +801,7 @@
 
             
 
-            <code class="ruby">  class Channel &lt; ActionCable::Channel::Base</code>
+            <code class="ruby">  class ChatChannel &lt; ApplicationCable::Channel</code>
           </li>
         </div>
       
@@ -812,12 +812,133 @@
 
             
 
+            <code class="ruby">    def subscribed</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+            
+
+            
+
+            <code class="ruby">      # Your subscription logic here</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby">  </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby">    def unsubscribed</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">      # Any cleanup needed when the channel is unsubscribed</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby">  </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby">    def send_message(data)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
+            
+            
+
+            
+
+            <code class="ruby">      # Your send message logic here</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="13">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="14">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="4">
+          <li class="missed" data-hits="0" data-linenumber="15">
             
             
 
